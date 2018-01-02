@@ -1,0 +1,6 @@
+framework module Pods_GeoVenturesApp {
+  umbrella header "Pods-GeoVenturesApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

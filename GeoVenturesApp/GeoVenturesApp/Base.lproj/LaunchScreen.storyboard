@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-9K-f2i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoVenturesApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sed-DB-4y8">
+                                        <rect key="frame" x="0.0" y="267" width="375" height="133"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29798874260000002" green="0.65026372669999999" blue="0.93165105579999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sed-DB-4y8" firstAttribute="height" secondItem="cf7-9K-f2i" secondAttribute="height" multiplier="0.2" id="EyN-xo-2Pj"/>
+                                    <constraint firstItem="sed-DB-4y8" firstAttribute="centerY" secondItem="cf7-9K-f2i" secondAttribute="centerY" id="Q9h-Go-OB4"/>
+                                    <constraint firstItem="sed-DB-4y8" firstAttribute="centerX" secondItem="cf7-9K-f2i" secondAttribute="centerX" id="aeH-jD-TyN"/>
+                                    <constraint firstItem="sed-DB-4y8" firstAttribute="width" secondItem="cf7-9K-f2i" secondAttribute="width" id="l9z-Vz-SfZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cf7-9K-f2i" secondAttribute="bottom" id="11s-da-h3F"/>
+                            <constraint firstItem="cf7-9K-f2i" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="LAz-qe-Qgr"/>
+                            <constraint firstAttribute="trailing" secondItem="cf7-9K-f2i" secondAttribute="trailing" id="gUf-tg-IHS"/>
+                            <constraint firstItem="cf7-9K-f2i" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jlq-5g-TD9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+</document>

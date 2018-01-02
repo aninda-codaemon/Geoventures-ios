@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "48a2c94f-5631-443d-bb14-48b21a4a5722",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "48a2c94f-5631-443d-bb14-48b21a4a5722" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "48a2c94f-5631-443d-bb14-48b21a4a5722" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BF6BFF10-E09C-467F-B590-8F43D82C996B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "48a2c94f-5631-443d-bb14-48b21a4a5722" : "iOS_Loylity\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GeoVenturesApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/LoyalityHoopApp\/GeoVenturesApp\/GeoVenturesApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/canopusinfosystems1.xp-dev.com\/svn\/iOS_Loylity",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "48a2c94f-5631-443d-bb14-48b21a4a5722"
+    }
+  ]
+}

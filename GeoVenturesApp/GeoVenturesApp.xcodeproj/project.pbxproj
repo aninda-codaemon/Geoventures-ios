@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AACBCC218D9389DA55163697 /* Pods_GeoVenturesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A23F92DC8E697F5B57F54A5 /* Pods_GeoVenturesApp.framework */; };
+		DA0593A71FE2BCBB00C2950B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0593A61FE2BCBB00C2950B /* HomeVC.swift */; };
+		DA0593AA1FE2C12700C2950B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0593A91FE2C12700C2950B /* LoginVC.swift */; };
+		DA48575F1FE9606B0052500E /* ConstantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48575E1FE9606B0052500E /* ConstantVC.swift */; };
+		DA4EDF4C1FE3AF82000F7C43 /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4EDF4B1FE3AF82000F7C43 /* HomePageTableViewCell.swift */; };
+		DA6221391FE2938200B85EE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6221381FE2938200B85EE9 /* BaseViewController.swift */; };
+		DAC78EAE1FE2791E005C3BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC78EAD1FE2791E005C3BA7 /* AppDelegate.swift */; };
+		DAC78EB31FE2791E005C3BA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC78EB11FE2791E005C3BA7 /* Main.storyboard */; };
+		DAC78EB61FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAC78EB41FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodeld */; };
+		DAC78EB81FE2791E005C3BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC78EB71FE2791E005C3BA7 /* Assets.xcassets */; };
+		DAC78EBB1FE2791E005C3BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC78EB91FE2791E005C3BA7 /* LaunchScreen.storyboard */; };
+		DADBB3361FE3E99300482B60 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBB3351FE3E99200482B60 /* AddPostViewController.swift */; };
+		DADBB33C1FE412C100482B60 /* ImportPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBB33B1FE412C100482B60 /* ImportPostViewController.swift */; };
+		DADF27711FEAA88700273E91 /* SlideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF27701FEAA88700273E91 /* SlideVC.swift */; };
+		DAE4734B1FE51F1A0053BDB1 /* SetRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4734A1FE51F190053BDB1 /* SetRadiusViewController.swift */; };
+		DAFD59171FE5512E00ACE537 /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD59161FE5512E00ACE537 /* StepSlider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2522504737420721C1D39059 /* Pods-GeoVenturesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoVenturesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoVenturesApp/Pods-GeoVenturesApp.release.xcconfig"; sourceTree = "<group>"; };
+		440A93443AB2C61F730D4409 /* Pods-GeoVenturesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoVenturesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoVenturesApp/Pods-GeoVenturesApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7A23F92DC8E697F5B57F54A5 /* Pods_GeoVenturesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoVenturesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0593A61FE2BCBB00C2950B /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DA0593A91FE2C12700C2950B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DA48575E1FE9606B0052500E /* ConstantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantVC.swift; sourceTree = "<group>"; };
+		DA4EDF4B1FE3AF82000F7C43 /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		DA6221381FE2938200B85EE9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DAC78EAA1FE2791E005C3BA7 /* GeoVenturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoVenturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC78EAD1FE2791E005C3BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAC78EB21FE2791E005C3BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAC78EB51FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoVenturesApp.xcdatamodel; sourceTree = "<group>"; };
+		DAC78EB71FE2791E005C3BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC78EBA1FE2791E005C3BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAC78EBC1FE2791E005C3BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADBB3351FE3E99200482B60 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		DADBB33B1FE412C100482B60 /* ImportPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPostViewController.swift; sourceTree = "<group>"; };
+		DADF27701FEAA88700273E91 /* SlideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideVC.swift; sourceTree = "<group>"; };
+		DAE4734A1FE51F190053BDB1 /* SetRadiusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRadiusViewController.swift; sourceTree = "<group>"; };
+		DAFD58EB1FE54B8000ACE537 /* RangeSlider */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RangeSlider; path = "../../../../../../../../Downloads/iosrangeslider-master 2/RangeSlider"; sourceTree = "<group>"; };
+		DAFD59141FE5512C00ACE537 /* GeoVenturesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoVenturesApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		DAFD59151FE5512D00ACE537 /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
+		DAFD59161FE5512E00ACE537 /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAC78EA71FE2791E005C3BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBCC218D9389DA55163697 /* Pods_GeoVenturesApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25BFA357CC4AC6DC9B4A2FEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				440A93443AB2C61F730D4409 /* Pods-GeoVenturesApp.debug.xcconfig */,
+				2522504737420721C1D39059 /* Pods-GeoVenturesApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D74B9B7945F03D0971BD1429 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A23F92DC8E697F5B57F54A5 /* Pods_GeoVenturesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA0593A81FE2BCC500C2950B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA0593A91FE2C12700C2950B /* LoginVC.swift */,
+				DA0593A61FE2BCBB00C2950B /* HomeVC.swift */,
+				DADF276E1FEAA84000273E91 /* AddPost */,
+				DADBB33B1FE412C100482B60 /* ImportPostViewController.swift */,
+				DAE4734A1FE51F190053BDB1 /* SetRadiusViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DA4EDF4A1FE3AF16000F7C43 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				DAFD58EB1FE54B8000ACE537 /* RangeSlider */,
+				DA4EDF4B1FE3AF82000F7C43 /* HomePageTableViewCell.swift */,
+			);
+			name = CustomClasses;
+			sourceTree = "<group>";
+		};
+		DAC78EA11FE2791E005C3BA7 = {
+			isa = PBXGroup;
+			children = (
+				DAC78EAC1FE2791E005C3BA7 /* GeoVenturesApp */,
+				DAC78EAB1FE2791E005C3BA7 /* Products */,
+				25BFA357CC4AC6DC9B4A2FEE /* Pods */,
+				D74B9B7945F03D0971BD1429 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC78EAB1FE2791E005C3BA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAC78EAA1FE2791E005C3BA7 /* GeoVenturesApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAC78EAC1FE2791E005C3BA7 /* GeoVenturesApp */ = {
+			isa = PBXGroup;
+			children = (
+				DA48575E1FE9606B0052500E /* ConstantVC.swift */,
+				DAC78EAD1FE2791E005C3BA7 /* AppDelegate.swift */,
+				DA6221381FE2938200B85EE9 /* BaseViewController.swift */,
+				DAFD59131FE5511F00ACE537 /* Slider */,
+				DA0593A81FE2BCC500C2950B /* View Controllers */,
+				DA4EDF4A1FE3AF16000F7C43 /* CustomClasses */,
+				DAC78EB11FE2791E005C3BA7 /* Main.storyboard */,
+				DAC78EB71FE2791E005C3BA7 /* Assets.xcassets */,
+				DAC78EB91FE2791E005C3BA7 /* LaunchScreen.storyboard */,
+				DAC78EBC1FE2791E005C3BA7 /* Info.plist */,
+				DAC78EB41FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodeld */,
+			);
+			path = GeoVenturesApp;
+			sourceTree = "<group>";
+		};
+		DADF276E1FEAA84000273E91 /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				DADBB3351FE3E99200482B60 /* AddPostViewController.swift */,
+				DADF276F1FEAA86800273E91 /* SlideVC */,
+			);
+			name = AddPost;
+			sourceTree = "<group>";
+		};
+		DADF276F1FEAA86800273E91 /* SlideVC */ = {
+			isa = PBXGroup;
+			children = (
+				DADF27701FEAA88700273E91 /* SlideVC.swift */,
+			);
+			name = SlideVC;
+			sourceTree = "<group>";
+		};
+		DAFD59131FE5511F00ACE537 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				DAFD59151FE5512D00ACE537 /* StepSlider.h */,
+				DAFD59161FE5512E00ACE537 /* StepSlider.m */,
+				DAFD59141FE5512C00ACE537 /* GeoVenturesApp-Bridging-Header.h */,
+			);
+			name = Slider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC78EA91FE2791E005C3BA7 /* GeoVenturesApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC78EBF1FE2791F005C3BA7 /* Build configuration list for PBXNativeTarget "GeoVenturesApp" */;
+			buildPhases = (
+				F34C58BB5EAF67B25A38B809 /* [CP] Check Pods Manifest.lock */,
+				DAC78EA61FE2791E005C3BA7 /* Sources */,
+				DAC78EA71FE2791E005C3BA7 /* Frameworks */,
+				DAC78EA81FE2791E005C3BA7 /* Resources */,
+				6418E63FDC4A0529C91FD887 /* [CP] Embed Pods Frameworks */,
+				69A3FD063AD9024CDC88DFA6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoVenturesApp;
+			productName = GeoVenturesApp;
+			productReference = DAC78EAA1FE2791E005C3BA7 /* GeoVenturesApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAC78EA21FE2791E005C3BA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Cano-n";
+				TargetAttributes = {
+					DAC78EA91FE2791E005C3BA7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2ZRFJYMMPY;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = DAC78EA51FE2791E005C3BA7 /* Build configuration list for PBXProject "GeoVenturesApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAC78EA11FE2791E005C3BA7;
+			productRefGroup = DAC78EAB1FE2791E005C3BA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAC78EA91FE2791E005C3BA7 /* GeoVenturesApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAC78EA81FE2791E005C3BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC78EBB1FE2791E005C3BA7 /* LaunchScreen.storyboard in Resources */,
+				DAC78EB81FE2791E005C3BA7 /* Assets.xcassets in Resources */,
+				DAC78EB31FE2791E005C3BA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6418E63FDC4A0529C91FD887 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GeoVenturesApp/Pods-GeoVenturesApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACFloatingTextfield_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoVenturesApp/Pods-GeoVenturesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A3FD063AD9024CDC88DFA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoVenturesApp/Pods-GeoVenturesApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F34C58BB5EAF67B25A38B809 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoVenturesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAC78EA61FE2791E005C3BA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6221391FE2938200B85EE9 /* BaseViewController.swift in Sources */,
+				DADBB33C1FE412C100482B60 /* ImportPostViewController.swift in Sources */,
+				DA48575F1FE9606B0052500E /* ConstantVC.swift in Sources */,
+				DA4EDF4C1FE3AF82000F7C43 /* HomePageTableViewCell.swift in Sources */,
+				DA0593A71FE2BCBB00C2950B /* HomeVC.swift in Sources */,
+				DAFD59171FE5512E00ACE537 /* StepSlider.m in Sources */,
+				DADF27711FEAA88700273E91 /* SlideVC.swift in Sources */,
+				DAE4734B1FE51F1A0053BDB1 /* SetRadiusViewController.swift in Sources */,
+				DAC78EB61FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodeld in Sources */,
+				DAC78EAE1FE2791E005C3BA7 /* AppDelegate.swift in Sources */,
+				DA0593AA1FE2C12700C2950B /* LoginVC.swift in Sources */,
+				DADBB3361FE3E99300482B60 /* AddPostViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAC78EB11FE2791E005C3BA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC78EB21FE2791E005C3BA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAC78EB91FE2791E005C3BA7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC78EBA1FE2791E005C3BA7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAC78EBD1FE2791F005C3BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAC78EBE1FE2791F005C3BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAC78EC01FE2791F005C3BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440A93443AB2C61F730D4409 /* Pods-GeoVenturesApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2ZRFJYMMPY;
+				INFOPLIST_FILE = GeoVenturesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.canopusapps.geoVenturesTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "412ca619-e48d-408b-a1c7-6151da338419";
+				PROVISIONING_PROFILE_SPECIFIER = DEV_GeoVenturesApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeoVenturesApp/GeoVenturesApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DAC78EC11FE2791F005C3BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2522504737420721C1D39059 /* Pods-GeoVenturesApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2ZRFJYMMPY;
+				INFOPLIST_FILE = GeoVenturesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.canopusapps.geoVenturesTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "412ca619-e48d-408b-a1c7-6151da338419";
+				PROVISIONING_PROFILE_SPECIFIER = DEV_GeoVenturesApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeoVenturesApp/GeoVenturesApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAC78EA51FE2791E005C3BA7 /* Build configuration list for PBXProject "GeoVenturesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC78EBD1FE2791F005C3BA7 /* Debug */,
+				DAC78EBE1FE2791F005C3BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC78EBF1FE2791F005C3BA7 /* Build configuration list for PBXNativeTarget "GeoVenturesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC78EC01FE2791F005C3BA7 /* Debug */,
+				DAC78EC11FE2791F005C3BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAC78EB41FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAC78EB51FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodel */,
+			);
+			currentVersion = DAC78EB51FE2791E005C3BA7 /* GeoVenturesApp.xcdatamodel */;
+			path = GeoVenturesApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DAC78EA21FE2791E005C3BA7 /* Project object */;
+}
