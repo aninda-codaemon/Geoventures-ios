@@ -27,8 +27,8 @@ class ImportPostViewController: UIViewController, UITextFieldDelegate {
             if let  currentLocation = locManager.location{
                 print(currentLocation.coordinate.latitude)
                 print(currentLocation.coordinate.longitude)
-                lat = String(self.currentLocation.coordinate.latitude)
-                long = String(self.currentLocation.coordinate.longitude)
+                lat = String(currentLocation.coordinate.latitude)
+                long = String(currentLocation.coordinate.longitude)
             }else{
                 lat = String(22.7196)
                 long = String(75.8577)
@@ -125,51 +125,7 @@ class ImportPostViewController: UIViewController, UITextFieldDelegate {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        if people.count != 0 {
-//            for manage in people {
-//                id = manage.value(forKeyPath: "id") as? String
-//                loginKey = manage.value(forKeyPath: "loginKey") as? String
-//            }
-//        }
-//
-//        let parameters: Parameters = ["Id": id!, "loginKey": loginKey!, "userLat":lat, "userLong" : long] as [String:Any]
-//
-//        if self.isConnectedToInternet() {
-//            self.showHud("")
-//            Alamofire.request(ConstantVC.userFindPost, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { (response) in
-//                debugPrint(response)
-//                let responseData = response.result.value as AnyObject
-//                print(responseData)
-//                if (response.result.value != nil) {
-//                    self.hideHUD()
-//                    let messageServer = responseData["message"] ?? "Unable to fetch data"
-//                    let isSuccess = responseData["status_code"] as! Int
-//                    if (isSuccess == 200) {
-//
-//                       print(responseData)
-//                        self.hideHUD()
-//
-//                    }
-//                    else {
-//                        self.hideHUD()
-//
-//                        self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: messageServer as! String, CancelButtonTitle: "OK");
-//                    }
-//                }
-//                else {
-//                    self.hideHUD()
-//                    self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: InternetConnection.lost.rawValue, CancelButtonTitle: "OK");
-//                }
-//            })
-//        }
-//        else {
-//            self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: InternetConnection.lost.rawValue, CancelButtonTitle: "Cancel")
-//        }
-//    }
-    
+  
     //-------------------------
     //MARK:- textfield delegate
     //-------------------------

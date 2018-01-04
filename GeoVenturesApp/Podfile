@@ -9,7 +9,8 @@ target 'GeoVenturesApp' do
    pod ‘MBProgressHUD’
    pod 'ACFloatingTextfield-Swift', '~> 1.7'
    pod 'SDWebImage'
-    pod 'SwiftyJSON'
+   pod 'SwiftyJSON'
   # Pods for GeoVenturesApp
 
 end
+

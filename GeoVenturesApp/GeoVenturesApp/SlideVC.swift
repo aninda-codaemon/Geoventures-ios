@@ -40,6 +40,9 @@ class SlideVC: UIViewController {
         super.viewDidLoad()
         
         self.titleField.text = title
+        self.titleField.setLeftPaddingPoints(10.0)
+        self.titleField.setRightPaddingPoints(10.0)
+    
         self.descriptionTextView.text = descrip
         if !self.descriptionTextView.text.isEmpty {
             self.labelDesc.isHidden = true
@@ -56,8 +59,8 @@ class SlideVC: UIViewController {
             if let  currentLocation = locManager.location{
                 print(currentLocation.coordinate.latitude)
                 print(currentLocation.coordinate.longitude)
-                lat = String(self.currentLocation.coordinate.latitude)
-                long = String(self.currentLocation.coordinate.longitude)
+                lat = String(currentLocation.coordinate.latitude)
+                long = String(currentLocation.coordinate.longitude)
             }else{
                 lat = String(22.7196)
                 long = String(75.8577)
@@ -160,11 +163,11 @@ class SlideVC: UIViewController {
         }
         else {
             if titleField.text == "" {
-                 self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Please fill the title field", CancelButtonTitle: "Cancel")
+                 self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Please fill the title field", CancelButtonTitle: "OK")
             }else if descriptionTextView.text == "" {
-                self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Please fill the Description field", CancelButtonTitle: "Cancel")
+                self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Please fill the Description field", CancelButtonTitle: "OK")
             }
-            if self.isConnectedToInternet(){
+           else if self.isConnectedToInternet(){
                 self.showHud("")
             let parameters = [
                 "postLng": long, "postLat": lat, "Id":id!, "loginKey":loginKey!, "postTitle" : titleField.text!, "postDescription" : descriptionTextView.text!, "postType": "I"] as [String : Any]
@@ -178,6 +181,7 @@ class SlideVC: UIViewController {
                 self.hideHUD()
                 self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: InternetConnection.lost.rawValue, CancelButtonTitle: "Cancel")
             }
+            
       }
     }
     

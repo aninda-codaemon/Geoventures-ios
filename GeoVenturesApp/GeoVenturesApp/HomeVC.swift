@@ -7,6 +7,7 @@ import MapKit
 import SwiftyJSON
 import SDWebImage
 
+
 class HomeVC: UIViewController {
 
     @IBOutlet var leftSlideView: UIView!
@@ -23,6 +24,8 @@ class HomeVC: UIViewController {
     var messageServer = ""
     var id : String?
     var loginKey : String?
+    var currentPage = 1
+    var totalPage = 0
     
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -39,36 +42,21 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         locManager.requestWhenInUseAuthorization()
-        
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
-            if let  currentLocation = locManager.location{
-                print(currentLocation.coordinate.latitude)
-                print(currentLocation.coordinate.longitude)
-                lat = String(self.currentLocation.coordinate.latitude)
-                long = String(self.currentLocation.coordinate.longitude)
-            }else{
-                lat = String(22.7196)
-                long = String(75.8577)
-            }
-        }
+        locManager.delegate = self
+       
         
         homeTableView.estimatedRowHeight = 200
         homeTableView.rowHeight = UITableViewAutomaticDimension
         homeListDataDict = ["images":homeListImagesForTableView, "titles":homeListTitlesForTableView, "address":homeListAddressForTableView]
         loadData()
-        //parseData()
     }
-    
-    
-
-    
-    
+ 
     //-----------------------
-    //MARK:- parsing data1  `    //-----------------------
+    //MARK:- parsing data1  `
+    //-----------------------
     
     
-    private func parseData()
+  func parseData()
     {
         if people.count != 0 {
             for manage in people {
@@ -76,7 +64,7 @@ class HomeVC: UIViewController {
                 loginKey = manage.value(forKeyPath: "loginKey") as? String
             }
         }
-        let parameters: Parameters = ["Id": id!, "loginKey": loginKey!, "userLat":lat, "userLong" : long] as [String:Any]
+        let parameters: Parameters = ["Id": id!, "loginKey": loginKey!, "userLat":lat, "userLong" : long, "fetchPage" : 1 , "perPage": 100] as [String:Any]
         if self.isConnectedToInternet(){
             self.showHud("")
             Alamofire.request(ConstantVC.userFindPost, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: ["Content-Type" :"application/json"]).responseJSON(completionHandler: { (response) in
@@ -87,10 +75,19 @@ class HomeVC: UIViewController {
                 if (response.result.value != nil) {
                     let response = JSON(response.result.value)
                     if response["status_code"].int ==  200{
+                        
+                        if let cp = response["data"]["current_page"].int{
+                            self.currentPage = cp
+                        }
+                        
+                        if let tp = response["data"]["total_pages"].int{
+                            self.totalPage = tp
+                        }
                         if let posts = response["data"]["posts"].array{
-                            self.userSearchPost = posts
+                            self.userSearchPost = posts;
                             self.homeTableView.reloadData()
                         }
+                       
                         self.hideHUD()
                     }else {
                         self.hideHUD()
@@ -102,39 +99,19 @@ class HomeVC: UIViewController {
                     self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Unable to fetch data", CancelButtonTitle: "OK");
                 }
             })
-            
-//            Alamofire.request(ConstantVC.userFindPost, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { (response) in
-//                debugPrint(response)
-//                let responseData = response.result.value as AnyObject
-//                print(responseData)
-//                if (response.result.value != nil) {
-//                    self.hideHUD()
-//                    let messageServer = responseData["message"] ?? "Unable to fetch data"
-//                    let isSuccess = responseData["status_code"] as! Int
-//                    if (isSuccess == 200) {
-//
-//                        print(responseData)
-//                        self.hideHUD()
-//                    }
-//                    else {
-//                        self.hideHUD()
-//                        self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: (messageServer as? String) ?? "", CancelButtonTitle: "OK");
-//                    }
-//                }
-//                else {
-//                    self.hideHUD()
-//                    self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Unable to fetch data", CancelButtonTitle: "OK");
-//                }
-//            })
-         }
+          
+        }
         else {
             self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "Unable to fetch data", CancelButtonTitle: "Cancel")
         }
     }
     
+   
     //--------------------
     //MARK:- Loading Data
     //--------------------
+    
+    
     func loadData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -150,7 +127,24 @@ class HomeVC: UIViewController {
    
     
     override func viewWillAppear(_ animated: Bool) {
-        self.parseData()
+        if CLLocationManager.locationServicesEnabled() {
+            if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+                CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+                if let  currentLocation = locManager.location{
+                    print(currentLocation.coordinate.latitude)
+                    print(currentLocation.coordinate.longitude)
+                    lat = String(currentLocation.coordinate.latitude)
+                    long = String(currentLocation.coordinate.longitude)
+                    self.parseData()
+                }else{
+                    //simulator testing
+                    lat = String(22.7196)
+                    long = String(75.8577)
+                    self.parseData()
+                }
+            }
+        }
+        
         leftBarButton.isEnabled = true
         rightBarButton.isEnabled = true
         
@@ -295,7 +289,8 @@ class HomeVC: UIViewController {
 //MARK: Table Delegate Methods
 //----------------------------
 
-extension HomeVC: UITextViewDelegate, UITableViewDataSource {
+extension HomeVC:  UITableViewDataSource, UITableViewDelegate {
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -303,7 +298,8 @@ extension HomeVC: UITextViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userSearchPost.count;
+        
+        return userSearchPost.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -314,7 +310,8 @@ extension HomeVC: UITextViewDelegate, UITableViewDataSource {
         cell.viewINcell.layer.borderColor = UIColor.init(red: 0/255, green: 196/255, blue: 255/255, alpha: 1).cgColor
         cell.address.text =  userSearchPost[indexPath.row]["post_description"].string!
         
-        cell.locationImage.image = UIImage(named:(homeListDataDict["images"] as! Array)[indexPath.row])
+        cell.locationImage.sd_setShowActivityIndicatorView(true)
+        cell.locationImage.sd_setIndicatorStyle(.gray)
         let imageURL = URL.init(string:  userSearchPost[indexPath.row]["post_media"].string!)
         cell.locationImage.sd_setImage(with: imageURL) { (image, error, cheche, url) in
             
@@ -322,5 +319,76 @@ extension HomeVC: UITextViewDelegate, UITableViewDataSource {
         cell.title.text = userSearchPost[indexPath.row]["post_title"].string!
         return cell
     }
+//    
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//
+//        if currentPage != totalPage {
+//                        self.showHud("")
+//                        self.currentPage = currentPage + 1
+//                        self.parseData()
+//                        self.hideHUD()
+//                    }else {
+//                        self.hideHUD()
+//                        self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "No More data", CancelButtonTitle: "OK")
+//                    }
+//    }
+//        if currentPage != totalPage {
+//                    self.showHud("")
+//                        self.currentPage = currentPage + 1
+//                        self.parseData()
+//                    self.hideHUD()
+//                }
     
+//
+//     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//
+//        if currentPage != totalPage {
+//            self.showHud("")
+//            self.currentPage = currentPage + 1
+//            self.parseData()
+//            self.hideHUD()
+//        }else {
+//            self.hideHUD()
+//            self.showAlertViewWithTitle(title: ConstantVC.alertViewTitle, Message: "No More data", CancelButtonTitle: "OK")
+//        }
+//     }
+    }
+
+extension HomeVC: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+            if let  currentLocation = locManager.location{
+                print(currentLocation.coordinate.latitude)
+                print(currentLocation.coordinate.longitude)
+                lat = String(currentLocation.coordinate.latitude)
+                long = String(currentLocation.coordinate.longitude)
+                self.parseData()
+            }else{
+                lat = String(22.7196)
+                long = String(75.8577)
+            }
+        }else{
+            let alertController = UIAlertController (title: "Message", message: "Please enable your location service.", preferredStyle: .alert)
+            
+            let settingsAction = UIAlertAction(title: "Ok", style: .default) { (_) -> Void in
+                guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                    return
+                }
+                
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                        print("Settings opened: \(success)") // Prints true
+                    })
+                }
+            }
+            alertController.addAction(settingsAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
+    }
 }
+
+
